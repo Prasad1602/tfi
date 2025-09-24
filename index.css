@@ -233,6 +233,15 @@ button:active {
     font-weight: 500;
     margin-top: 24px;
 }
+.menu-card-title {
+    color: #ffffff ;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
 .menu-item-link {
     color: #f1c40f;
@@ -463,6 +472,7 @@ button:active {
   font-size:0.7rem;
 
 }
+
 
 
 
