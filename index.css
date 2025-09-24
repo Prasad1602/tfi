@@ -250,6 +250,7 @@ button:active {
     border-radius: 16px;
     border: 1px solid #3498db;
       color:white;
+    font-family:"Roboto", sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height:100%;
 }
@@ -262,6 +263,7 @@ button:active {
     border-radius: 16px;
     color:white;
     border: 1px solid #3498db;
+    font-family:"Roboto", sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height:100%;
 }
@@ -461,6 +463,7 @@ button:active {
   font-size:0.7rem;
 
 }
+
 
 
 
