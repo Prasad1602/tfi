@@ -86,7 +86,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 120px;
+    width: 170px;
     margin-top: 10px;
 }
 
@@ -220,4 +220,5 @@
     .cart-total {
         font-size: 1rem;
     }
+
 }
