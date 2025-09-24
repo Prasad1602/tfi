@@ -219,7 +219,7 @@ button:active {
 
 .menu-item-image {
     border-radius: 16px;
-    height: 70vh;
+    height: 50vh;
     transition: transform 0.3s ease;
 }
 
@@ -448,4 +448,5 @@ button:active {
 .timings{
   list-style-type: circle;
   font-size:0.7rem;
+
 }
