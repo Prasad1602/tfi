@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const totalSum = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
             
-            const whatsappNumber = '7032329963';
+            const whatsappNumber = '917032329963';
             const orderDetails = cart.map(item => `${item.title} (${item.price}/-) x ${item.quantity}`).join('\n');
             const message = encodeURIComponent(`I want to order:\n${orderDetails}\n\nTotal: ${totalSum}/-\n\nDelivery Address: ${address}`);
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
@@ -112,4 +112,5 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'index.html';
         });
     }
+
 });
