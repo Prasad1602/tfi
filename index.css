@@ -249,6 +249,7 @@ button:active {
 .menu-item-card {
     border-radius: 16px;
     border: 1px solid #3498db;
+      color:white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height:100%;
 }
@@ -259,6 +260,7 @@ button:active {
 }
 .menu-item-card-2 {
     border-radius: 16px;
+    color:white;
     border: 1px solid #3498db;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height:100%;
@@ -459,6 +461,7 @@ button:active {
   font-size:0.7rem;
 
 }
+
 
 
 
