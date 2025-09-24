@@ -165,7 +165,7 @@ button:active {
     border-color: #3498db;
     border-radius: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height:30vh;
+    height:40vh;
 }
 
 .wcu-card:hover {
@@ -221,6 +221,7 @@ button:active {
 .menu-item-image {
     border-radius: 16px;
     transition: transform 0.3s ease;
+    width:40;
 }
 
 .menu-item-image:hover {
@@ -451,4 +452,5 @@ button:active {
   font-size:0.7rem;
 
 }
+
 
