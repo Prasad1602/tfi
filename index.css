@@ -224,8 +224,6 @@ button:active {
     width:40;
 }
 
-.menu-item-image:hover {
-    transform: scale(1.05);
 }
 
 .menu-card-title {
@@ -461,6 +459,7 @@ button:active {
   font-size:0.7rem;
 
 }
+
 
 
 
