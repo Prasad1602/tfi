@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.food-munch-logo {
+    width: 90px;
+    height: 90px;
+    transition: transform 0.3s ease;
+}
+
+.food-munch-logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar {
+    background: linear-gradient(90deg, #2c3e50, #3498db) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #34495e, #2980b9) ;
+}
+
+#navItem1, #navItem2, #navItem3 {
+    color: #ffffff ;
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 15px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#navItem1:hover, #navItem2:hover, #navItem3:hover {
+    color: #f1c40f;
+    transform: translateY(-2px);
+}
+
+#navItem1::after, #navItem2::after, #navItem3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f1c40f;
+    transition: width 0.3s ease;
+}
+
+#navItem1:hover::after, #navItem2:hover::after, #navItem3:hover::after {
+    width: 100%;
+}
+
+.name-1 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: #f1c40f;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+}
+
+.name-1:hover {
+    color: #ffffff;
+}
+
+.banner-section-bg-container {
+    background-image: url("https://ik.imagekit.io/ur5zxnajm/top-view-food-frame-with-copy-space.jpg?updatedAt=1758693393342");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-section-bg-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.banner-heading {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+    --accent: #f1c40f;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background: linear-gradient(45deg, #e67e22, #f1c40f);
+    cursor: pointer;
+    color: #ffffff;
+    padding: 1em 2em;
+    transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+    position: relative;
+    z-index: 2;
+}
+
+button:hover {
+    box-shadow: var(--hover-shadows);
+    background: linear-gradient(45deg, #d35400, #e1b12c);
+    transform: translateY(-3px);
+}
+
+button:active {
+    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    background: var(--accent);
+    transform: scale(0.95);
+}
+
+.wcu-section {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.wcu-section-heading {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.wcu-section-description {
+    color: #ecf0f1;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: rgba(44, 62, 80, 0.9);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3498db;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wcu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+    border-radius: 8px;
+}
+
+.wcu-card-title {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #ecf0f1;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.explore-menu-section {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+.menu-section-heading {
+   
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color:yellow;
+ 
+ 
+    text-align: center;
+
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.menu-item-image {
+    border-radius: 16px;
+    height: 70vh;
+    transition: transform 0.3s ease;
+}
+
+.menu-item-image:hover {
+    transform: scale(1.05);
+}
+
+.menu-card-title {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.menu-item-link {
+    color: #f1c40f;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu-item-link:hover {
+    color: #e67e22;
+}
+
+.menu-item-card {
+    border-radius: 16px;
+    border: 1px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px;
+}
+.menu-section-heading{
+    text-align: center;
+}
+.menu-section-heading-1{
+    text-align: center;
+    font-size: medium;
+    font-weight: 200;
+}
+
+.footer {
+  background:linear-gradient(180deg,#FFCC00,#2C3E50);
+  color: #131212;
+  padding: 20px 10px 5px;
+  font-family: Arial, sans-serif;
+}
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.footer h2 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: #2C3E50;
+  font-weight:bold;
+}
+
+.footer h3 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: #2C3E50;
+}
+
+
+.footer-about p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+
+
+  ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+/* Contact Section */
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 0.7rem;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #111111;
+}
+
+.timings{
+  list-style-type: circle;
+  font-size:0.7rem;
+}
