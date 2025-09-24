@@ -268,6 +268,7 @@ button:active {
 .menu-item-card-2:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 .follow-us-section {
     background-color: white;
 }
