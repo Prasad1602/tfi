@@ -455,6 +455,7 @@ button:active {
 .footer-contact p {
   margin: 6px 0;
   font-size: 0.7rem;
+font-style:underline;
 }
 
 /* Bottom Section */
@@ -472,6 +473,7 @@ button:active {
   font-size:0.7rem;
 
 }
+
 
 
 
