@@ -14,6 +14,15 @@
     margin-bottom: 40px;
     animation: fadeIn 1s ease-in-out;
 }
+.menu-section-timings {
+    font-family: "Playfair Display", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
 
 @keyframes fadeIn {
     0% {
@@ -382,3 +391,4 @@
         padding: 0.5em 1.2em;
     }
 }
+
