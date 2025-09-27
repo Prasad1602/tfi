@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (isFizzyDrink) {
                 const drinkName = itemElement.firstChild.textContent.trim();
-                $('#fizzyDrinkModalLabel').text(`Select Size for ${drinkName}`);
+                $('#fizzyDrinkModalLabel').text(Select Size for ${drinkName});
                 $('#fizzyDrinkModal').modal('show');
 
                 const confirmButton = document.getElementById('confirmFizzy');
@@ -27,8 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         return;
                     }
 
-                    itemTitle = `${drinkName} (${selectedSize.value})`;
+                    itemTitle = ${drinkName} (${selectedSize.value});
+                  
                     itemPrice = parseFloat(selectedSize.getAttribute('data-price'));
+                    if (isNaN(itemPrice) || itemPrice <= 0) {
+                        console.error(Invalid price for ${itemTitle}: ${selectedSize.getAttribute('data-price')});
+                        alert('Error: Invalid price for the selected item. Please try again.');
+                        return;
+                    }
 
                     const existingItemIndex = cart.findIndex(item => item.title === itemTitle);
                     if (existingItemIndex !== -1) {
@@ -47,9 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 const priceSpan = itemElement.querySelector('span');
                 const priceText = priceSpan ? priceSpan.textContent.trim() : '';
                 itemTitle = itemElement.textContent.replace(priceText, '').trim().split('\n')[0].trim();
+                
                 itemPrice = parseFloat(priceText.replace('/-', ''));
+                if (isNaN(itemPrice) || itemPrice <= 0) {
+                    console.error(Invalid price for ${itemTitle}: ${priceText});
+                    alert('Error: Invalid price for the selected item. Please try again.');
+                    return;
+                }
 
-                quantity = prompt(`How many ${itemTitle} do you want?, '1'`);
+                quantity = prompt(How many ${itemTitle} do you want?, '1');
                 quantity = parseInt(quantity);
 
                 if (isNaN(quantity) || quantity <= 0) {
@@ -77,14 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cart.length === 0) {
             cartDisplay.innerHTML = '<p>No items in cart</p>';
         } else {
-            const totalSum = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            const totalSum = cart.reduce((sum, item) => {
+                const price = Number(item.price);
+                const quantity = Number(item.quantity);
+                if (isNaN(price) || isNaN(quantity)) {
+                    console.error(Invalid data for item: ${item.title}, price: ${item.price}, quantity: ${item.quantity});
+                    return sum; 
+                }
+                return sum + (price * quantity);
+            }, 0);
 
             cartDisplay.innerHTML = '<h3>Cart Items:</h3><ul>' +
                 cart.map((item, index) =>
                     `<li>${item.title} (${item.price}/-) x ${item.quantity} 
                     <button class="remove-item" data-index="${index}">Remove</button></li>`
                 ).join('') +
-                `</ul><p class="cart-total">Total: ${totalSum}/-</p>`;
+                </ul><p class="cart-total">Total: ${totalSum.toFixed(2)}/-</p>; 
         }
 
         document.querySelectorAll('.remove-item').forEach(button => {
@@ -99,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (btnItemElement.classList.contains('fizzy-drinks')) {
                         const sizes = JSON.parse(btnItemElement.getAttribute('data-prices'));
                         Object.keys(sizes).forEach(size => {
-                            const possibleTitle =` ${btnItemElement.firstChild.textContent.trim()} (${size})`;
+                            const possibleTitle = ${btnItemElement.firstChild.textContent.trim()} (${size});
                             if (possibleTitle === removedItem.title) {
                                 btnItemTitle = possibleTitle;
                             }
@@ -133,22 +154,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            const totalSum = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const totalSum = cart.reduce((sum, item) => {
+                const price = Number(item.price);
+                const quantity = Number(item.quantity);
+                if (isNaN(price) || isNaN(quantity)) {
+                    console.error(Invalid data for item: ${item.title}, price: ${item.price}, quantity: ${item.quantity});
+                    return sum;
+                }
+                return sum + (price * quantity);
+            }, 0);
 
             const whatsappNumber = '+918881112204';
-            const orderDetails = cart.map(item => `${item.title} (${item.price}/-) x ${item.quantity}`).join('%0A');
-
-            const messageText = `I want to order:%0A${orderDetails}%0ATotal: ${totalSum}/-%0ADelivery Address: ${address}`;
+            
+            const orderDetails = cart.map(item => ${item.title} (${item.price}/-) x ${item.quantity}).join('%0A');
+            const messageText = New Order:%0A%0AItems:%0A${orderDetails}%0A%0ATotal: ${totalSum.toFixed(2)}/- %0A%0ADelivery Address: ${address};
             const message = encodeURIComponent(messageText);
 
             console.log('Cart:', cart);
             console.log('Order Details:', orderDetails);
             console.log('Message:', messageText);
             console.log('Encoded Message:', message);
-            console.log(`'WhatsApp URL:', https://wa.me/${whatsappNumber}?text=${message}`);
+            console.log('WhatsApp URL:', https://wa.me/${whatsappNumber}?text=${message});
 
             alert('Redirecting to WhatsApp... On mobile, the message will auto-fill. On desktop, copy the preview and paste it into the chat.');
-            window.location.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+            window.location.href = https://wa.me/${whatsappNumber}?text=${message};
         });
     }
 
