@@ -11,8 +11,6 @@
     font-weight: 700;
     color: #ffffff;
     text-align: center;
-    
-   
     margin-bottom: 40px;
     animation: fadeIn 1s ease-in-out;
 }
@@ -69,6 +67,21 @@
     color: #f1c40f;
     font-weight: 700;
 }
+.fizzy-drinks {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.fizzy-drinks span {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    color: #f1c40f;
+    font-weight: 700;
+}
 
 .button-1 {
     --c1: #ffffff;
@@ -86,7 +99,7 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 170px;
+    width: 120px;
     margin-top: 10px;
 }
 
@@ -220,5 +233,152 @@
     .cart-total {
         font-size: 1rem;
     }
+}
 
+/* Custom Modal Styling */
+.modal-content {
+    background: rgba(44, 62, 80, 0.95);
+    border: 1px solid #3498db;
+    border-radius: 16px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+
+.modal-header {
+    border-bottom: 1px solid #3498db;
+}
+
+.modal-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body p {
+    font-size: 1.2rem;
+    color: #f1c40f;
+    margin-bottom: 15px;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.form-check-input:checked {
+    background-color: #f1c40f;
+    border-color: #f1c40f;
+}
+
+.form-group label {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #3498db;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #f1c40f;
+    box-shadow: 0 0 5px rgba(241, 196, 15, 0.4);
+}
+
+.modal-footer {
+    border-top: 1px solid #3498db;
+}
+
+.modal-cancel-btn {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.6em 1.5em;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    border: none;
+    border-radius: 0.5em;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-cancel-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    background: linear-gradient(45deg, #c0392b, #a93226);
+}
+
+.modal-cancel-btn:active {
+    transform: scale(0.95);
+}
+
+.modal-confirm-btn {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.6em 1.5em;
+    background: linear-gradient(45deg, #e67e22, #f1c40f);
+    border: none;
+    border-radius: 0.5em;
+    color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-confirm-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4);
+    background: linear-gradient(45deg, #d35400, #e1b12c);
+}
+
+.modal-confirm-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-body p {
+        font-size: 1rem;
+    }
+
+    .form-check-label {
+        font-size: 1rem;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+    }
+
+    .modal-cancel-btn, .modal-confirm-btn {
+        font-size: 1rem;
+        padding: 0.5em 1.2em;
+    }
 }
