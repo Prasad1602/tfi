@@ -319,7 +319,7 @@ button:active {
 }
 
 .footer {
-  background:linear-gradient(180deg,#FFCC00,#2C3E50);
+  background:linear-gradient(180deg,#808080,#4A7C7C);
   color: #131212;
   padding: 20px 10px 5px;
   font-family: Arial, sans-serif;
@@ -477,6 +477,7 @@ font-style:underline;
 .contact-line{
     font-style:underline;
 }
+
 
 
 
