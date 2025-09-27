@@ -96,7 +96,7 @@
     --c1: #ffffff;
     --c2: #e67e22;
     --size-letter: 16px;
-    width:80px;
+  
     padding: 0.7em 1.5em;
     font-size: var(--size-letter);
     font-family: "Roboto", sans-serif;
@@ -142,7 +142,7 @@
 .button-2 {
     text-align: center;
     margin-top: 40px;
-    width:80px;
+
 }
 
 .back-button {
@@ -393,5 +393,6 @@
         padding: 0.5em 1.2em;
     }
 }
+
 
 
